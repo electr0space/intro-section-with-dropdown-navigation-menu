@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+</head>
+<body>
+  <div class="container">
+
+    <header class="header-content">
+
+      <img src="images/logo.svg" class="logo">
+
+      <nav class="nav-section">
+
+        <div class="nav-section__left">
+          <div class="close-icon">
+            <img src="images/icon-close-menu.svg" id="close-icon">
+          </div>
+          <div class="dropdown-features indent">
+            <p class="nav-el">Features</p>
+            <div class="hidden-features">
+              <div> 
+                <img src="images/icon-todo.svg">
+                <span>Todo List</span>
+              </div>
+              <div>
+                <img src="images/icon-calendar.svg">
+                <span>Calendar</span>
+              </div>
+              <div>
+                <img src="images/icon-reminders.svg">
+                <span>Reminders</span>
+              </div>
+              <div>
+                <img src="images/icon-planning.svg">
+                <span>Planning</span>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-company indent">
+            <p class="nav-el">Company</p>
+            <div class="hidden-company">
+              <p>History</p>
+              <p>Our Team</p>
+              <p>Blog</p>
+            </div>
+          </div>
+          <p class="nav-el indent">Careers</p>
+          <p class="nav-el indent">About</p>
+        </div>
+        <div class="registration-section">
+          <a class="nav-el login-btn btn" href="#">Login</a>
+          <a class="nav-el register-btn btn" href="#">Register</a>
+        </div>
+      </nav>
+      
+      <div id="hamburger-icon">
+        <img src="images/icon-menu.svg">
+      </div>
+      
+    </header>
+
+    <main class="content-container">
+      <div class="hero-content">
+        <h1>Make remote work</h1>
+
+        <p>
+          Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
+        </p>
+
+        <a class="hero__btn btn" href="#">Learn more</a>
+
+        <div class="hero__clients">
+          <img src="images/client-databiz.svg">
+          <img src="images/client-audiophile.svg">
+          <img src="images/client-meet.svg">
+          <img src="images/client-maker.svg">
+        </div>
+      </div>
+      <div class="hero__img">
+        <img id="hero-img" src="images/image-hero-desktop.png">
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

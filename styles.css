@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+:root {
+    --white: hsl(0, 0%, 98%);
+    --grey: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+}
+
+html {
+    font-size: 18px;
+    background-color: var(--white);
+}
+
+body {
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "Epilogue", sans-serif;
+}
+
+a.btn {
+    padding: 15px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.content-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    row-gap: 40%;
+    padding: 0 15px;
+}
+
+.header-content {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 40px 64px;
+    color: var(--grey);
+}
+
+
+.logo {
+    margin-right: 60px;
+}
+
+/* Navigation section  */
+
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-section > * {
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.nav-section__left {
+    display: flex;
+}
+
+.nav-el:hover {
+    color: var(--black);
+}
+
+.close-icon {
+    display: none;
+}
+
+.indent {
+    margin-right: 30px;
+}
+
+.dropdown-features, .dropdown-company {
+    position: relative;
+}
+
+.dropdown-features .nav-el::after {
+    content: url("images/icon-arrow-down.svg");
+    padding-left: 4px;
+}
+
+.hidden-features, 
+.hidden-company {
+    display: none;
+    position: absolute;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--grey);
+    border-radius: 10px;
+    background-color: var(--white);
+}
+
+.hidden-features {
+    transform: translate(-45%);
+}
+
+.hidden-features div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.hidden-features div:hover, 
+.hidden-company p:hover {
+    color: var(--black);
+}
+
+.hidden-features img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.dropdown-company > .nav-el::after {
+    content: url("images/icon-arrow-down.svg");
+    padding-left: 4px;
+}
+
+.dropdown-active .hidden-features,
+.dropdown-active .hidden-company  {
+    display: block;
+}
+
+.dropdown-active .nav-el::after {
+    content: url("images/icon-arrow-up.svg");
+}
+
+.hidden-company {
+    min-width: 120px;
+}
+
+.hidden-company p {
+    margin-bottom: 10px;
+}
+
+.login-btn {
+    color: inherit;
+    margin-left: 40px;
+}
+
+.register-btn {
+    color: var(--grey);
+    border: 2px solid var(--grey);
+}
+
+.register-btn:hover {
+    border: 2px solid var(--black);
+}
+
+#hamburger-icon {
+    display: none;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+h1 {
+    margin-top: 120px;
+    font-size: clamp(3rem, 4.5vw, 4rem);
+    max-width: 480px;
+}
+
+.hero-content p {
+    max-width: 420px;
+    line-height: 1.5;
+    color: var(--grey);
+}
+
+.hero__img {
+    width: 480px;
+    display: flex;
+    height: 100%;
+    max-height: 645px;
+}
+
+.hero__img img {
+    width: 100%;
+    height: 100%;  
+}
+
+.hero__btn {
+    align-self: flex-start;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    margin-bottom: 110px;
+    font-weight: 600;
+}
+
+.hero__btn:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.hero__clients {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 900px) {
+    .content-container {
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .header-content {
+        position: relative;
+    }
+
+    .nav-section {
+        display: none;
+        height: 100vh;
+        width: 50%;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        justify-content: flex-start;
+        padding: 20px 3%;
+        background-color: var(--white);
+        box-shadow:0 0 0 10000px rgba(0,0,0,.50);
+    }
+
+    .nav-section, .registration-section {
+        flex-direction: column;
+    }
+
+    .nav-section > * {
+        padding: 15px 0;
+    }
+
+    .nav-section__left {
+        flex-direction: column;
+    }
+
+    .nav-section__left > * {
+        padding: 10px 0;
+    }
+
+    .hidden-features, .hidden-company {
+        position: static;
+        transform: translate(0);
+        box-shadow: none;
+    }
+
+    .registration-section {
+        display: flex;
+        text-align: center;
+    }
+
+    .login-btn {
+        margin-left: 0;
+    }
+
+    .close-icon {
+        display: flex;
+        justify-content: flex-end;
+        cursor: pointer;
+        margin-right: 25px;
+        padding-top: 0;
+    }
+
+    #hamburger-icon {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .hidden-features,
+    .hidden-company {
+        padding: 15px 0 0 20px;
+    }
+
+    .hidden-features div, 
+    .hidden-company p {
+        margin-bottom: 1rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        order: 2;
+        margin: auto 3%;
+    }
+    
+    h1 {
+        text-align: center;
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .hero__btn {
+        align-self: center;
+        margin: 10px 0 50px;
+    }
+
+    .hero__img {
+        order: 1;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .hero__img img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+    .hero__clients {
+        margin-bottom: 50px;
+    }
+}
